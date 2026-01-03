@@ -90,13 +90,11 @@ var scriptFun = function () {
   ready("shreddit-comments-page-ad", removeAd("comments page ad"));
 };
 
-scriptFun()
 
-
-// if (document.readyState == "complete") {
-//   scriptFun();
-//   log("Ran on completed document");
-// } else {
-//   window.addEventListener("load", scriptFun);
-//   log("Registered as 'load' event listener");
-// }
+if (document.readyState == "complete") {
+  scriptFun();
+  log("Ran on completed document");
+} else {
+  window.addEventListener("load", scriptFun);
+  log("Registered as 'load' event listener");
+}
